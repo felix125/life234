@@ -43,6 +43,7 @@ export class SimulationCore {
 
   simulate(steps) {
     if (this.currentStep >= this.totalSteps) {
+      this.notifyUpdate(true); // 傳入完成標記
       return false;
     }
 
@@ -62,12 +63,13 @@ export class SimulationCore {
     return true;
   }
 
-  notifyUpdate() {
+  notifyUpdate(isCompleted = false) {
     const data = {
       money: [...this.money],
       step: this.currentStep,
       totalSteps: this.totalSteps,
-      snapshots: this.snapshots  // 添加這行
+      snapshots: this.snapshots,
+      isCompleted: isCompleted
     };
     this.updateCallbacks.forEach(callback => callback(data));
   }

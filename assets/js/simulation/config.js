@@ -9,14 +9,18 @@ export const CONFIG = {
 // 圖表尺寸和邊距設定
 export const CHART_DIMENSIONS = {
   margin: {
-    top: 30,
+    top: 5,
     right: 30,
-    bottom: 50,
+    bottom: 40,
     left: 50
   },
-  width: 400,
-  height: 300,
-  // 計算實際可用的繪圖區域
+  // 根據視窗大小調整圖表尺寸
+  get width() {
+    return Math.min(window.innerWidth - 40, 400);  // 最大寬度 400，留 20px 邊距
+  },
+  get height() {
+    return Math.min(this.width * 0.75, 300);  // 保持適當的寬高比
+  },
   get innerWidth() {
     return this.width - this.margin.left - this.margin.right;
   },
@@ -35,6 +39,6 @@ export const COLORS = {
 // 模擬運行的控制參數
 export const SIMULATION = {
   updateInterval: 100,   // 畫面更新間隔(ms)
-  stepsPerUpdate: 100,   // 每次更新執行的步數
+  stepsPerUpdate: 250,   // 每次更新執行的步數
   totalSteps: 50000      // 可選的總模擬次數
 };
