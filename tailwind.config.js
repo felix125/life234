@@ -8,7 +8,9 @@ module.exports = {
     './_posts/en/*.md',
     './_posts/zh/*.md',
     './en/*.html',
+    '/en/*.md',
     './zh/*.html',
+    './zh/*.md',
     './*.html',
   ],
   theme: {
