@@ -1,0 +1,7 @@
+d3:
+  src: https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js
+  fallback: /assets/js/vendor/d3.v7.9.0.min.js  # 備用的本地版本
+
+simulation:
+  src: /assets/js/simulation/index.js
+  module: true

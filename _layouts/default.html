@@ -20,3 +20,21 @@ layout: basic
     <p>Share freely, spread widely 🌱</p>
   {% endif %}
 </footer>
+
+{% if page.scripts %}
+  {% for script_name in page.scripts %}
+    {% assign script = site.data.scripts[script_name] %}
+    {% if script %}
+      {% if script.src contains 'http' %}
+        <script src="{{ script.src }}"
+          {% if script.module %}type="module"{% endif %}
+          onerror="this.onerror=null;this.src='{{ script.fallback | relative_url }}';">
+        </script>
+      {% else %}
+        <script src="{{ script.src | relative_url }}"
+          {% if script.module %}type="module"{% endif %}>
+        </script>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
