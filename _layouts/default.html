@@ -21,6 +21,8 @@ layout: basic
   {% endif %}
 </footer>
 
+{% include backtotop.html %}
+
 {% if page.scripts %}
   {% for script_name in page.scripts %}
     {% assign script = site.data.scripts[script_name] %}
