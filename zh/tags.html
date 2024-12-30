@@ -1,0 +1,66 @@
+---
+layout: default
+title: 全部文章
+permalink: /zh/tags/
+---
+
+<div class="container mx-auto px-4 py-8 -mt-8 lg:max-w-3xl">
+  <h1 class="text-3xl font-bold mb-6">{{ page.title }}</h1>
+
+  <!-- 標籤導航 -->
+  <div class="mb-8 pl-4 mx-auto rounded-md top-0">
+    <nav id="tag-nav" class="flex flex-wrap items-center gap-x-4">
+      {% for tag in site.tags %}
+        {% assign zh_count = 0 %}
+        {% for post in tag[1] %}
+          {% if post.lang == 'zh'  %}
+            {% assign zh_count = zh_count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        {% if zh_count > 0 %}
+        <span class="inline-flex">
+          <a href="#tag-{{ tag[0] | slugify }}" class="text-teal-800 hover:text-blue-900 font-medium px-3 text-center transform transition-transform duration-200 hover:scale-125">
+            {{ tag[0] }} ({{ zh_count }})
+          </a>
+        </span>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+
+  <!-- 依標籤分類的文章列表 -->
+  {% for tag in site.tags %}
+    {% assign zh_count = 0 %}
+    {% for post in tag[1] %}
+      {% if post.path contains '_posts/zh/' %}
+        {% assign zh_count = zh_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if zh_count > 0 %}
+    <div class="mb-8" id="tag-{{ tag[0] | slugify }}">
+      <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-amber-700">
+        {{ tag[0] }}
+      </h2>
+      <div class="space-y-2">
+        {% for post in tag[1] %}
+          {% if post.lang == 'zh' %}
+          <a href="{{ post.url }}" class="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+              <div class="flex-1 space-y-1 md:space-y-0">
+                <div class="font-medium hover:text-blue-700">{{ post.title }}</div>
+                <div class="text-gray-500 hover:text-slate-900 text-sm md:ml-4 md:inline">
+                  by {{ post.author | default: site.data.en.author }}
+                </div>
+              </div>
+              <div class="text-gray-500 text-sm">
+                {{ post.date | date: "%Y-%m-%d" }}
+              </div>
+            </div>
+          </a>
+          {% endif %}
+          {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>

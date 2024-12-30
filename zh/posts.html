@@ -7,30 +7,49 @@ permalink: /zh/posts/
 <div class="container mx-auto px-4 py-8 -mt-8 lg:max-w-3xl">
   <h1 class="text-3xl font-bold mb-6">{{ page.title }}</h1>
 
-  {% assign postsByYearMonth = site.posts | where_exp: "post", "post.path contains '_posts/zh/'" | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
+  <!-- 年份導航 -->
+  <div class="mb-8 pl-4 mx-auto rounded-md shadow-sm top-0 bg-white py-4 border-b">
+    <nav id="year-nav" class="flex flex-wrap items-center gap-x-4">
+      {% assign years = site.posts | where_exp: "post", "post.path contains '_posts/zh/'" |
+                        group_by_exp: "post", "post.date | date: '%Y'" %}
+
+      {% for year in years %}
+      <span class="inline-flex">
+        <a href="#year-{{ year.name }}" class="text-teal-700 hover:text-cyan-900 hover:underline font-medium w-16 text-center">
+          {{ year.name }}年
+        </a>
+      </span>
+      {% endfor %}
+    </nav>
+  </div>
+
+
+  <!-- 文章列表 -->
+  {% assign postsByYearMonth = site.posts | where_exp: "post", "post.path contains '_posts/zh/'" |
+                               group_by_exp: "post", "post.date | date: '%Y-%m'" %}
 
   {% for yearMonth in postsByYearMonth %}
-    <div class="mb-8">
-      <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-cyan-700">
-        {{ yearMonth.name | split: '-' | first }} 年 {{ yearMonth.name | split: '-' | last }}月
-      </h2>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {% for post in yearMonth.items %}
-        <a href="{{ post.url }}" class="block no-underline">
-          <div class="border rounded-lg p-4 shadow-md bg-white prose
-                      hover:bg-gray-50 hover:scale-110 transition-transform duration-300 ease-in-out">
-            <h3 class="text-xl font-semibold mb-2 hover:text-blue-700">
-              {{ post.title }}
-            </h3>
-            <div class="text-gray-600 text-sm">
-              <p class="m-0">作者：{{ post.author | default: site.data.en.author }}</p>
-              <p class="m-0">日期：{{ post.date | date: "%Y-%m-%d" }}</p>
+  <div class="mb-8 scroll-mt-20" id="year-{{ yearMonth.name | split: '-' | first }}">
+    <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-amber-700">
+      {{ yearMonth.name | split: '-' | first }} 年 {{ yearMonth.name | split: '-' | last }}月
+    </h2>
+    <div class="space-y-2">
+      {% for post in yearMonth.items %}
+      <a href="{{ post.url }}" class="block hover:bg-gray-50 p-3 rounded-lg transition-colors">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+          <div class="flex-1 space-y-1 md:space-y-0">
+            <div class="font-medium hover:text-blue-700">{{ post.title }}</div>
+            <div class="text-gray-700 hover:text-slate-900 text-sm md:ml-4 md:inline">
+              by {{ post.author | default: site.data.en.author }}
             </div>
           </div>
-        </a>
-        {% endfor %}
-      </div>
+          <div class="text-gray-500 text-sm">
+            {{ post.date | date: "%Y-%m-%d" }}
+          </div>
+        </div>
+      </a>
+      {% endfor %}
     </div>
-    {% endfor %}
+  </div>
+  {% endfor %}
 </div>
-
