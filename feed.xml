@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>life234</title>
+    <link>http://localhost</link>
+    <description>A personal blog built with nabu.</description>
+    <language>zh-Hant</language>
+    <lastBuildDate>Fri, 21 Mar 2025 10:04:14 +0800</lastBuildDate>
+    <atom:link href="http://localhost/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>生命沒有問題</title>
+      <link>http://localhost/posts/20250318-140548.html</link>
+      <pubDate>Tue, 18 Mar 2025 00:00:00 +0800</pubDate>
+      <guid>http://localhost/posts/20250318-140548.html</guid>
+      <description><![CDATA[#+KEYWORDS:]]></description>
+    </item>
+    <item>
+      <title>測試 properties</title>
+      <link>http://localhost/posts/20250318-133320.html</link>
+      <pubDate>Tue, 18 Mar 2025 00:00:00 +0800</pubDate>
+      <guid>http://localhost/posts/20250318-133320.html</guid>
+      <description><![CDATA[#+KEYWORDS:]]></description>
+    </item>
+    <item>
+      <title>小額募款</title>
+      <link>http://localhost/news/20250321-095419.html</link>
+      <pubDate>Fri, 21 Mar 2025 00:00:00 +0800</pubDate>
+      <guid>http://localhost/news/20250321-095419.html</guid>
+      <description><![CDATA[#+KEYWORDS:]]></description>
+    </item>
+    <item>
+      <title>life234 - All Posts</title>
+      <link>http://localhost/posts/index.html</link>
+      <pubDate>Fri, 21 Mar 2025 00:00:00 +0800</pubDate>
+      <guid>http://localhost/posts/index.html</guid>
+      <description><![CDATA[]]></description>
+    </item>
+  </channel>
+</rss>
