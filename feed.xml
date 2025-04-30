@@ -5,8 +5,36 @@
     <link>https://life234.zenvoyage.art</link>
     <description>A personal blog built with nabu.</description>
     <language>zh-Hant</language>
-    <lastBuildDate>Tue, 29 Apr 2025 11:55:13 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 30 Apr 2025 16:16:55 +0800</lastBuildDate>
     <atom:link href="https://life234.zenvoyage.art/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>All News</title>
+      <link>https://life234.zenvoyage.art/news/sitemap.html</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://life234.zenvoyage.art/news/sitemap.html</guid>
+      <description><![CDATA[]]></description>
+    </item>
+    <item>
+      <title>Life234 - All News</title>
+      <link>https://life234.zenvoyage.art/news/index.html</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://life234.zenvoyage.art/news/index.html</guid>
+      <description><![CDATA[]]></description>
+    </item>
+    <item>
+      <title>All Posts</title>
+      <link>https://life234.zenvoyage.art/posts/sitemap.html</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://life234.zenvoyage.art/posts/sitemap.html</guid>
+      <description><![CDATA[]]></description>
+    </item>
+    <item>
+      <title>All Posts</title>
+      <link>https://life234.zenvoyage.art/posts/index.html</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://life234.zenvoyage.art/posts/index.html</guid>
+      <description><![CDATA[]]></description>
+    </item>
     <item>
       <title>給一位朋友的書信</title>
       <link>https://life234.zenvoyage.art/posts/20250420-143411.html</link>
@@ -19,34 +47,6 @@
       <link>https://life234.zenvoyage.art/posts/20250420-144027.html</link>
       <pubDate>Tue, 29 Oct 2024 00:00:00 +0800</pubDate>
       <guid isPermaLink="true">https://life234.zenvoyage.art/posts/20250420-144027.html</guid>
-      <description><![CDATA[]]></description>
-    </item>
-    <item>
-      <title>All News</title>
-      <link>https://life234.zenvoyage.art/news/sitemap.html</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://life234.zenvoyage.art/news/sitemap.html</guid>
-      <description><![CDATA[]]></description>
-    </item>
-    <item>
-      <title>Life234 - All News</title>
-      <link>https://life234.zenvoyage.art/news/index.html</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://life234.zenvoyage.art/news/index.html</guid>
-      <description><![CDATA[]]></description>
-    </item>
-    <item>
-      <title>All Posts</title>
-      <link>https://life234.zenvoyage.art/posts/sitemap.html</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://life234.zenvoyage.art/posts/sitemap.html</guid>
-      <description><![CDATA[]]></description>
-    </item>
-    <item>
-      <title>All Posts</title>
-      <link>https://life234.zenvoyage.art/posts/index.html</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://life234.zenvoyage.art/posts/index.html</guid>
       <description><![CDATA[]]></description>
     </item>
     <item>
@@ -71,10 +71,10 @@
       <description><![CDATA[]]></description>
     </item>
     <item>
-      <title>致你：一個漂流者的生命書信</title>
-      <link>https://life234.zenvoyage.art/posts/20250424-041748.html</link>
-      <pubDate>Thu, 24 Apr 2025 00:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://life234.zenvoyage.art/posts/20250424-041748.html</guid>
+      <title>聯考的經驗</title>
+      <link>https://life234.zenvoyage.art/posts/20250430-160924.html</link>
+      <pubDate>Thu, 26 Sep 2024 00:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://life234.zenvoyage.art/posts/20250430-160924.html</guid>
       <description><![CDATA[]]></description>
     </item>
   </channel>
